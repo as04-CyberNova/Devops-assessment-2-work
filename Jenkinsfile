@@ -23,7 +23,7 @@ pipeline {
 
         stage('Run Tests') {
             steps {
-                bat 'python test_form.py'
+                bat '"C:\\Users\\abhyu\\AppData\\Local\\Programs\\Python\\Python310\\python.exe" test_form.py'
             }
         }
     }
