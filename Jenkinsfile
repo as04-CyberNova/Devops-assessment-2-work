@@ -23,17 +23,7 @@ pipeline {
 
         stage('Run Tests') {
             steps {
-                // Ensure Python 3 is available on the Jenkins agent
-                sh '''
-                if command -v python3 &>/dev/null; then
-                    python3 test_form.py
-                elif command -v python &>/dev/null; then
-                    python test_form.py
-                else
-                    echo "Python is not installed. Please install Python to run tests."
-                    exit 1
-                fi
-                '''
+                bat 'python test_form.py'
             }
         }
     }
